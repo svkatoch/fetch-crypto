@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLDINFO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: rgb(25, 29, 40);
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+        }
+
+        
+
+        .header-container {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .main-heading {
+            margin: 0;
+            font-size: 3em;
+            color: rgb(93, 199, 194);
+            position: absolute;
+            left: 20px;
+            top: 0;
+        }
+
+        .sub-heading {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 88px;
+        }
+
+        .info-bar {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .info-bar span {
+            margin-right: 20px;
+            font-size: 1.1em;
+        }
+
+        .telegram-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgb(93, 199, 194);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .telegram-button:hover {
+            background-color: rgb(70, 150, 150);
+        }
+
+        .price-info {
+            margin-top: 20px;
+            font-size: 3.5em;
+            text-align: center;
+            color: aqua;
+        }
+
+        .average-price {
+            margin-top: 30px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            font-size: 1em;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(93, 199, 194);
+            color: black;
+            border: none; /* Remove border from table headings */
+        }
+
+        td {
+            border: 1px solid rgb(46, 50, 65);
+            background-color: rgb(46, 50, 65);
+        }
+
+        .change {
+            font-weight: bold;
+        }
+
+        .change.up {
+            color: green;
+        }
+
+        .change.down {
+            color: red;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                text-align: center;
+            }
+
+            .main-heading {
+                position: static;
+                text-align: center;
+                font-size: 2.5em;
+            }
+
+            .sub-heading {
+                margin-top: 20px;
+            }
+
+            .info-bar {
+                margin-top: 10px;
+            }
+
+            table, th, td {
+                font-size: 0.9em;
+            }
+
+            .telegram-button {
+                top: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+
+            .price-info {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="main-heading">HOLDINFO</h1>
+            <h2 class="sub-heading">Best Price to Trade</h2>
+            <div class="price-info">&#8377;21,14,453</div>
+            <div class="average-price">
+                <h3>Average BTC Net Price Including Commission</h3>
+            </div>
+        </div>
+       
+        <a href="https://t.me/your-telegram-link" class="telegram-button">Connect Telegram</a>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Platform</th>
+                <th>Last Traded Price</th>
+                <th>Buy / Sell Price</th>
+                <th>Change</th>
+                <th>Savings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be populated here by script.js -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
